@@ -1,0 +1,50 @@
+# Quick start project
+
+## SETUP
+
+### Install Python (3.10.6)
+
+<https://www.python.org/downloads/>
+
+### Install Robot framework
+
+<https://robotframework.org/>
+
+To Install robotframework, run
+
+    pip install robotframework
+
+To check that the installation was succesful, run
+
+    robot --version
+
+### Install extesions
+
+    Nome: Robot Framework Language Server
+    ID: robocorp.robotframework-lsp
+    Descrição: VSCode extension support for Robot Framework
+    Versão: 1.1.0
+    Editor: Robocorp
+Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp
+
+## Execução
+
+01 - Especificar o diretório dos results da execução
+
+    python -m robot -d ./logs tests\Testes.robot
+
+02 - Executar apenas um teste específico da suíte:
+
+    python -m robot -d ./logs -t "Test Calculator With BDD Syntax" tests\Testes.robot
+
+03 - Dando um nome à execução (para efeito de Log/Report):
+
+    python -m robot -N "Nome de Exemplo" -d ../logs tests\Testes.robot 
+
+04 - Executando por TAGS:
+
+    python -m robot -d ./logs -i smoketest tests\Testes.robot
+
+05 - Atribuindo valores a variáveis:
+
+    python -m robot -d ./logs -v BROWSER:chrome tests\Testes.robot
